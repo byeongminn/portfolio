@@ -1,3 +1,5 @@
+import { ICON_URL } from "@/shared/constants";
+
 export const GET = async () => {
   try {
     return Response.json({
@@ -8,63 +10,63 @@ export const GET = async () => {
       stacks: {
         frontend: [
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/nextjs.svg`,
             name: "Next.js",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/react.svg`,
             name: "React",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/typescript.svg`,
             name: "Typescript",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/javascript.svg`,
             name: "Javascript",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/vanillaextract.svg`,
             name: "Vanilla-extract",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/styledcomponents.svg`,
             name: "Styled-components",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/tailwindcss.svg`,
             name: "Tailwind-CSS",
           },
         ],
         backend: [
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/nextjs.svg`,
             name: "Next.js",
           },
         ],
         tools: [
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/git.svg`,
             name: "Git",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/github.svg`,
             name: "Github",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/jira.svg`,
             name: "Jira",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/notion.svg`,
             name: "Notion",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/slack.svg`,
             name: "Slack",
           },
           {
-            iconUrl: "",
+            iconUrl: `${ICON_URL}/figma.svg`,
             name: "Figma",
           },
         ],

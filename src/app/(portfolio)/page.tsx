@@ -1,5 +1,12 @@
+import { Cover } from "@/features/cover/components/Cover";
 import { Suspense } from "react";
 
 export default function Home() {
-  return <Suspense fallback={<></>}></Suspense>;
+  return (
+    <main>
+      <Suspense fallback={<></>}>
+        <Cover />
+      </Suspense>
+    </main>
+  );
 }

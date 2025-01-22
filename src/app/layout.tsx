@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
-import "@/shared/styles";
+import localFont from "next/font/local";
 import { QueryProvider } from "@/shared/components/QueryProvider";
+import "@/shared/styles";
+
+const pretendard = localFont({
+  src: [
+    {
+      path: "../shared/styles/fonts/PretendardVariable.woff2",
+      weight: "300 700",
+    },
+  ],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "I'M JEON",
@@ -15,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className={pretendard.className}>
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
