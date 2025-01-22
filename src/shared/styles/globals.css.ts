@@ -12,6 +12,7 @@ globalStyle("html, body", {
   maxWidth: "100vw",
   minHeight: "100vh",
   backgroundColor: "#FAFAFF",
+  color: "#333333",
 });
 
 globalStyle("h1", {
@@ -42,4 +43,8 @@ globalStyle("h5", {
 globalStyle("h6", {
   fontSize: "12px",
   lineHeight: 1.3,
+});
+
+globalStyle("strong", {
+  fontWeight: 600,
 });
