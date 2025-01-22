@@ -33,6 +33,7 @@ export const titleWrapper = style([
     fontWeight: "700",
     lineHeight: 1.4,
     fontSize: "78px",
+    color: "#111111",
   },
 ]);
 
@@ -112,5 +113,6 @@ export const infoWrapper = style([
   {
     fontWeight: 300,
     textAlign: "right",
+    color: "#222222",
   },
 ]);
