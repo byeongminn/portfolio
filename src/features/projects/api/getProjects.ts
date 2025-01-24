@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "@/shared/constants";
 
-type Project = {
+export type Project = {
   title: string;
   description: string;
   period: string;

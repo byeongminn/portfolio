@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Source_Code_Pro } from "next/font/google";
+import clsx from "clsx";
 import { QueryProvider } from "@/shared/components/QueryProvider";
 import "@/shared/styles";
 
 const pretendard = localFont({
+  variable: "--font-pretendard",
   src: [
     {
       path: "../shared/styles/fonts/PretendardVariable.woff2",
@@ -11,6 +14,12 @@ const pretendard = localFont({
     },
   ],
   display: "swap",
+});
+
+const sourceCodePro = Source_Code_Pro({
+  variable: "--font-source-code-pro",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={pretendard.className}>
+      <body className={clsx(pretendard.variable, sourceCodePro.variable)}>
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
