@@ -4,9 +4,9 @@ import { style } from "@vanilla-extract/css";
 export const container = style([
   f.flex,
   f.directionColumn,
+  f.hFull,
   {
-    width: "31.25rem",
-    height: "45rem",
+    // width: "31.25rem",
     backgroundColor: "#ffffff",
     borderRadius: "0.75rem",
     boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.16)",
