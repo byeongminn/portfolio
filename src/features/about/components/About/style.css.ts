@@ -19,6 +19,9 @@ export const wrapper = style([
   f.directionColumn,
   {
     gap: "1.125rem",
+    padding: "2.5rem",
+    backgroundColor: "rgba(255, 255, 255, 0.3)",
+    boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.16)",
   },
 ]);
 

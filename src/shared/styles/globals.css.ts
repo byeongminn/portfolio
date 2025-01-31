@@ -20,7 +20,7 @@ globalStyle("html, body", {
 });
 
 globalStyle("h1", {
-  fontSize: "36px",
+  fontSize: "32px",
   lineHeight: 1.3,
 });
 
@@ -50,5 +50,9 @@ globalStyle("h6", {
 });
 
 globalStyle("strong", {
-  fontWeight: 600,
+  fontWeight: 500,
+  background: "#e0e0e0",
+  marginRight: "0.0625rem",
+  padding: "0.125rem 0.1875rem",
+  borderRadius: "0.25rem",
 });
