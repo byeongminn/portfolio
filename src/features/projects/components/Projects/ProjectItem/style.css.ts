@@ -6,7 +6,6 @@ export const container = style([
   f.directionColumn,
   f.hFull,
   {
-    // width: "31.25rem",
     backgroundColor: "#ffffff",
     borderRadius: "0.75rem",
     boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.16)",
@@ -44,6 +43,7 @@ export const infoWrapper = style([
 ]);
 
 export const title = style([
+  f.truncate2,
   {
     fontWeight: 600,
     color: "#050505",
@@ -51,6 +51,7 @@ export const title = style([
 ]);
 
 export const description = style([
+  f.truncate2,
   {
     marginTop: "0.25rem",
     color: "#111111",
@@ -82,7 +83,7 @@ export const achievementContents = style([
   {
     paddingLeft: "0.5rem",
     fontWeight: 400,
-    fontSize: "14px",
+    fontSize: "16px",
   },
 ]);
 

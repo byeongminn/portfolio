@@ -18,8 +18,8 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
         <div className={s.infoWrapper}>
           {/* 프로젝트 기본 정보 */}
           <div>
-            <h3 className={s.title}>{title}</h3>
-            <h5 className={s.description}>{description}</h5>
+            <h2 className={s.title}>{title}</h2>
+            <h4 className={s.description}>{description}</h4>
           </div>
 
           {/* 디바이더 */}
@@ -27,10 +27,10 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
 
           {/* 기간 및 주요성과 */}
           <div className={s.achievementsWrapper}>
-            <h5>{period}</h5>
+            <h4>{period}</h4>
             {achievements.map(({ title, contents }) => (
               <div key={title}>
-                <h5 className={s.achievementTitle}>{title}</h5>
+                <h4 className={s.achievementTitle}>{title}</h4>
                 {contents.map((content) => (
                   <p key={content} className={s.achievementContents}>
                     {content}
