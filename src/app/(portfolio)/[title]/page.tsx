@@ -1,4 +1,5 @@
 import { GetProjectItemRequestParams } from "@/features/projects/api/getProject";
+import { Project } from "@/features/projects/components/Project";
 
 export type ProjectPageParams = {
   params: Promise<GetProjectItemRequestParams>;
@@ -7,5 +8,5 @@ export type ProjectPageParams = {
 export default async function ProjectPage({ params }: ProjectPageParams) {
   const title = (await params).title;
 
-  return <div>Project: {title}</div>;
+  return <Project title={title} />;
 }
