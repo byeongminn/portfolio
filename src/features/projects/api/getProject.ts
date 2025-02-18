@@ -6,7 +6,6 @@ export type GetProjectItemRequestParams = {
 };
 
 export type ProjectItem = Project & {
-  segment: string;
   outline: string[];
   roles: {
     admin?: string[];

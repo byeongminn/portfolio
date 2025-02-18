@@ -3,6 +3,7 @@ export const GET = () => {
     return Response.json({
       projects: [
         {
+          segment: "e-commerce",
           title: "Interior E-commerce",
           description:
             "이커머스에 관심을 바탕으로, Next.js의 App Router와 FSD 디렉토리 구조 연습을 위해 상품 목록, 검색, 상세보기 기능을 구현한 개인 프로젝트",
@@ -31,6 +32,7 @@ export const GET = () => {
           ],
         },
         {
+          segment: "linme",
           title: "Linme",
           description:
             "사용자의 건강 데이터를 기반으로 맞춤형 건강기능식품을 추천하는 서비스",
@@ -61,6 +63,7 @@ export const GET = () => {
           ],
         },
         {
+          segment: "billie",
           title: "Billie",
           description:
             "오프라인 문서를 통해 관리되던 직원들의 근태 및 기자재를 더욱 체계적으로 관리할 수 있도록 돕는 서비스",
@@ -91,6 +94,7 @@ export const GET = () => {
           ],
         },
         {
+          segment: "pima",
           title: "PIMA (Platform for IMpact Analysis)",
           description:
             "철도 및 대중교통 사업의 사회경제적 지표 분석을 통해 사업 시행 전후영향을 분석 및 시각화하여 유관 정책 추진 시 활용할 수 있는 플랫폼",

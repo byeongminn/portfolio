@@ -1,13 +1,20 @@
 import { Project } from "@/features/projects/api/getProjects";
 import { Chip } from "@/features/projects/components/Chip";
 import * as s from "./style.css";
+import { useRouter } from "next/navigation";
 
 type ProjectItemProps = {
   project: Project;
 };
 
 export const ProjectItem = ({ project }: ProjectItemProps) => {
-  const { title, description, period, achievements, stacks } = project;
+  const { segment, title, description, period, achievements, stacks } = project;
+
+  const router = useRouter();
+
+  const handleLearnMoreClick = (segment: string) => {
+    router.push(`/${segment}`);
+  };
 
   return (
     <div className={s.container}>
@@ -50,7 +57,10 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
 
         {/* 자세히보기 버튼 */}
         <div className={s.buttonWrapper}>
-          <button className={s.button}>
+          <button
+            className={s.button}
+            onClick={() => handleLearnMoreClick(segment)}
+          >
             <span>자세히 보기</span>
             <span>→</span>
           </button>
