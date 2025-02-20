@@ -17,7 +17,7 @@ export const Project = ({ title }: Props) => {
   const router = useRouter();
 
   const handleCloseClick = () => {
-    router.push("/");
+    router.back();
   };
 
   return (

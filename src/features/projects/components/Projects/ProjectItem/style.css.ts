@@ -108,5 +108,6 @@ export const button = style([
     fontSize: "14px",
     color: "#ffffff",
     cursor: "pointer",
+    textDecoration: "none",
   },
 ]);

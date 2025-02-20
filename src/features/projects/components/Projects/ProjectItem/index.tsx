@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { Project } from "@/features/projects/api/getProjects";
 import { Chip } from "@/features/projects/components/Chip";
 import * as s from "./style.css";
-import { useRouter } from "next/navigation";
 
 type ProjectItemProps = {
   project: Project;
@@ -9,12 +9,6 @@ type ProjectItemProps = {
 
 export const ProjectItem = ({ project }: ProjectItemProps) => {
   const { segment, title, description, period, achievements, stacks } = project;
-
-  const router = useRouter();
-
-  const handleLearnMoreClick = (segment: string) => {
-    router.push(`/${segment}`);
-  };
 
   return (
     <div className={s.container}>
@@ -57,13 +51,10 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
 
         {/* 자세히보기 버튼 */}
         <div className={s.buttonWrapper}>
-          <button
-            className={s.button}
-            onClick={() => handleLearnMoreClick(segment)}
-          >
+          <Link className={s.button} href={`/${segment}`} scroll={false}>
             <span>자세히 보기</span>
             <span>→</span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
