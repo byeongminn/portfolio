@@ -1,6 +1,13 @@
 import { f } from "@/shared/styles/functions";
 import { style } from "@vanilla-extract/css";
 
+export const link = style([
+  {
+    color: "#333333",
+    textDecoration: "none",
+  },
+]);
+
 export const container = style([
   f.flex,
   f.directionColumn,
@@ -108,6 +115,5 @@ export const button = style([
     fontSize: "14px",
     color: "#ffffff",
     cursor: "pointer",
-    textDecoration: "none",
   },
 ]);
