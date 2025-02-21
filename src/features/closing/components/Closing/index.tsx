@@ -9,10 +9,9 @@ export const Closing = () => {
       <div className={s.closingWrapper}>
         <h1 className={s.thanks}>감사합니다</h1>
         <h2 className={s.aspiration}>
-          앞으로는 기능 구현을 넘어 성능 최적화와 문제 해결 능력을 갖춘
-          프론트엔드 개발자로 성장하고자 하며,
+          기능 구현을 넘어 성능 최적화와 문제 해결 능력을 갖추고,
           <br />
-          어떠한 문제도 해결해 나갈 수 있는 개발자가 되고자 합니다.
+          원활한 커뮤니케이션을 통해 목표를 달성하는 개발자가 되고자 합니다.
         </h2>
         <Link href="https://github.com/byeongminn" className={s.githubLink}>
           <Github />
