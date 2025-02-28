@@ -156,17 +156,16 @@ export const stacksWrapper = style([
   f.directionColumn,
   {
     gridArea: "stack",
-    gap: "1.5rem",
+    gap: "0.75rem",
+    marginTop: "0",
+    padding: "0 2rem",
     color: "#333333",
   },
   responsiveStyle({
     lg: {
+      gap: "1.5rem",
       marginTop: "6.25rem",
       padding: "0 2.5rem",
-    },
-    sm: {
-      marginTop: "0",
-      padding: "0 2rem",
     },
   }),
 ]);
@@ -175,7 +174,7 @@ export const stacks = style([
   f.flex,
   f.directionColumn,
   {
-    gap: "1rem",
+    gap: "0.5rem",
     textTransform: "capitalize",
   },
   responsiveStyle({
@@ -207,7 +206,7 @@ export const type = style([
 export const stackWrapper = style([
   f.flex,
   {
-    gap: "0.75rem",
+    gap: "0.5rem",
     flexWrap: "wrap",
   },
   responsiveStyle({
@@ -266,13 +265,12 @@ export const imageWrapper = style([
   f.flexCenterBox,
   {
     gridArea: "image",
-    margin: "1.25rem 0",
+    margin: "1rem 0",
   },
   responsiveStyle({
     lg: {
       margin: 0,
     },
-    sm: {},
   }),
 ]);
 
