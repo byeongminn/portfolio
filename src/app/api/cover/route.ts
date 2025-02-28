@@ -41,7 +41,7 @@ export const GET = async () => {
         backend: [
           {
             iconUrl: `${ICON_URL}/nextjs.svg`,
-            name: "Next.js",
+            name: "Next.js (Route Handlers)",
           },
         ],
         tools: [
