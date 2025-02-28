@@ -24,32 +24,32 @@ globalStyle("html, body", {
 
 globalStyle("h1", {
   fontSize: "32px",
-  lineHeight: 1.3,
+  lineHeight: 1.4,
 });
 
 globalStyle("h2", {
   fontSize: "24px",
-  lineHeight: 1.3,
+  lineHeight: 1.4,
 });
 
 globalStyle("h3", {
   fontSize: "18px",
-  lineHeight: 1.3,
+  lineHeight: 1.4,
 });
 
 globalStyle("h4", {
   fontSize: "16px",
-  lineHeight: 1.3,
+  lineHeight: 1.4,
 });
 
 globalStyle("h5", {
   fontSize: "14px",
-  lineHeight: 1.3,
+  lineHeight: 1.4,
 });
 
 globalStyle("h6", {
   fontSize: "12px",
-  lineHeight: 1.3,
+  lineHeight: 1.4,
 });
 
 globalStyle("strong", {

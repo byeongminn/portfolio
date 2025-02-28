@@ -54,7 +54,7 @@ export const wrapper = style([
 export const title = style([
   {
     fontWeight: 700,
-    fontSize: "16px",
+    fontSize: "18px",
     letterSpacing: "-0.03rem",
     color: "#222222",
   },
@@ -68,7 +68,7 @@ export const title = style([
 export const contents = style([
   {
     fontWeight: 300,
-    fontSize: "14px",
+    fontSize: "16px",
     letterSpacing: "-0.04rem",
   },
   responsiveStyle({
