@@ -29,7 +29,7 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
 
             {/* 기간 및 주요성과 */}
             <div className={s.achievementsWrapper}>
-              <h4>{period}</h4>
+              <h4 className={s.period}>{period}</h4>
               {achievements.map(({ title, contents }) => (
                 <div key={title}>
                   <h4 className={s.achievementTitle}>{title}</h4>

@@ -1,4 +1,5 @@
 import { f } from "@/shared/styles/functions";
+import { responsiveStyle } from "@/shared/styles/functions/layout.css";
 import { style } from "@vanilla-extract/css";
 
 export const link = style([
@@ -35,9 +36,15 @@ export const contentsWrapper = style([
   f.directionColumn,
   {
     flex: 1,
-    gap: "1.5rem",
-    padding: "1.75rem",
+    gap: "0.625rem",
+    padding: "0.75rem",
   },
+  responsiveStyle({
+    lg: {
+      gap: "1.5rem",
+      padding: "1.75rem",
+    },
+  }),
 ]);
 
 export const infoWrapper = style([
@@ -45,24 +52,41 @@ export const infoWrapper = style([
   f.directionColumn,
   {
     flex: 1,
-    gap: "1rem",
+    gap: "0.625rem",
   },
+  responsiveStyle({
+    lg: {
+      gap: "1rem",
+    },
+  }),
 ]);
 
 export const title = style([
   f.truncate2,
   {
     fontWeight: 600,
+    fontSize: "14px",
     color: "#050505",
   },
+  responsiveStyle({
+    lg: {
+      fontSize: "24px",
+    },
+  }),
 ]);
 
 export const description = style([
   f.truncate2,
   {
     marginTop: "0.25rem",
+    fontSize: "12px",
     color: "#111111",
   },
+  responsiveStyle({
+    lg: {
+      fontSize: "16px",
+    },
+  }),
 ]);
 
 export const divider = style([
@@ -80,18 +104,40 @@ export const achievementsWrapper = style([
   },
 ]);
 
+export const period = style([
+  {
+    fontSize: "12px",
+  },
+  responsiveStyle({
+    lg: {
+      fontSize: "16px",
+    },
+  }),
+]);
+
 export const achievementTitle = style([
   {
     fontWeight: 500,
+    fontSize: "12px",
   },
+  responsiveStyle({
+    lg: {
+      fontSize: "16px",
+    },
+  }),
 ]);
 
 export const achievementContents = style([
   {
     paddingLeft: "0.5rem",
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "12px",
   },
+  responsiveStyle({
+    lg: {
+      fontSize: "16px",
+    },
+  }),
 ]);
 
 export const stacksWrapper = style([
@@ -112,8 +158,13 @@ export const button = style([
     backgroundColor: "#333333",
     border: "none",
     borderRadius: "0.25rem",
-    fontSize: "14px",
+    fontSize: "12px",
     color: "#ffffff",
     cursor: "pointer",
   },
+  responsiveStyle({
+    lg: {
+      fontSize: "14px",
+    },
+  }),
 ]);

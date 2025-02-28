@@ -1,11 +1,17 @@
 import { f } from "@/shared/styles/functions";
+import { responsiveStyle } from "@/shared/styles/functions/layout.css";
 import { style } from "@vanilla-extract/css";
 
 export const container = style([
   {
-    padding: "11.25rem 0",
+    padding: "2rem 0",
     overflow: "hidden",
   },
+  responsiveStyle({
+    lg: {
+      padding: "11.25rem 0",
+    },
+  }),
 ]);
 
 export const wrapper = style([f.pRelative]);
@@ -42,6 +48,7 @@ export const swiperButton = style([
     zIndex: 2,
     transition: "all 0.3s",
     cursor: "pointer",
+    scale: 0.75,
   },
   {
     selectors: {
@@ -53,18 +60,33 @@ export const swiperButton = style([
       },
     },
   },
+  responsiveStyle({
+    lg: {
+      scale: 1,
+    },
+  }),
 ]);
 
 export const swiperButtonPrev = style([
   swiperButton,
   {
-    left: "3rem",
+    left: "1rem",
   },
+  responsiveStyle({
+    lg: {
+      left: "3rem",
+    },
+  }),
 ]);
 
 export const swiperButtonNext = style([
   swiperButton,
   {
-    right: "3rem",
+    right: "1rem",
   },
+  responsiveStyle({
+    lg: {
+      right: "3rem",
+    },
+  }),
 ]);
