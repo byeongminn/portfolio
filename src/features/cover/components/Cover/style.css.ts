@@ -69,6 +69,7 @@ export const titleWrapper = style([
   {
     gridArea: "title",
     fontWeight: "700",
+    fontSize: "30px",
     lineHeight: 1.4,
     color: "#111111",
   },
@@ -91,9 +92,6 @@ export const titleWrapper = style([
       maxWidth: "100%",
       fontSize: "40px",
     },
-    sm: {
-      fontSize: "24px",
-    },
   }),
 ]);
 
@@ -102,13 +100,14 @@ export const p1 = style([
   f.justifyBetween,
   f.alignCenter,
   {
-    padding: "0 1rem 0 0.75rem",
-    border: "0.25rem solid #4141FF",
+    padding: "0 0.75rem 0 1rem",
+    border: "0.125rem solid #4141FF",
     borderRadius: "999px",
   },
   responsiveStyle({
     md: {
       padding: "0 1rem 0 2.5rem",
+      border: "0.25rem solid #4141FF",
     },
   }),
 ]);
@@ -142,7 +141,7 @@ export const searchIcon = style([
 
 export const p2 = style([
   {
-    padding: "0 0.75rem",
+    padding: "0 1rem",
   },
   responsiveStyle({
     md: {
@@ -251,33 +250,21 @@ export const stackIcon = style([
 export const stackName = style([
   {
     fontWeight: 300,
-    fontSize: "10px",
+    fontSize: "12px",
   },
   responsiveStyle({
     lg: {
       fontSize: "16px",
-    },
-    md: {
-      fontSize: "12px",
     },
   }),
 ]);
 
 export const imageWrapper = style([
   f.flexCenterBox,
+  f.pRelative,
   {
     gridArea: "image",
-    margin: "1rem 0",
-  },
-  responsiveStyle({
-    lg: {
-      margin: 0,
-    },
-  }),
-]);
-
-export const image = style([
-  {
+    margin: "1.5rem auto",
     width: "50vw",
     height: "50vw",
   },
@@ -287,6 +274,7 @@ export const image = style([
       height: "31.25rem",
     },
     lg: {
+      margin: 0,
       width: "25rem",
       height: "25rem",
     },
@@ -296,6 +284,8 @@ export const image = style([
     },
   }),
 ]);
+
+export const image = style([]);
 
 export const infoWrapper = style([
   f.wFull,

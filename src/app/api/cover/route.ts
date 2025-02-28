@@ -38,12 +38,6 @@ export const GET = async () => {
             name: "Tailwind-CSS",
           },
         ],
-        backend: [
-          {
-            iconUrl: `${ICON_URL}/nextjs.svg`,
-            name: "Next.js (Route Handlers)",
-          },
-        ],
         tools: [
           {
             iconUrl: `${ICON_URL}/git.svg`,

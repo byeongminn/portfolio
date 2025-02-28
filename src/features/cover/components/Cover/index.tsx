@@ -53,8 +53,9 @@ export const Cover = () => {
               className={s.image}
               src="images/developer.svg"
               alt="developer"
-              width={500}
-              height={500}
+              fill
+              // width={500}
+              // height={500}
             />
           </div>
         </div>
