@@ -158,13 +158,15 @@ export const stacksWrapper = style([
     gridArea: "stack",
     gap: "0.75rem",
     marginTop: "0",
-    padding: "0 2rem",
+    padding: 0,
     color: "#333333",
   },
   responsiveStyle({
     lg: {
       gap: "1.5rem",
       marginTop: "6.25rem",
+    },
+    md: {
       padding: "0 2.5rem",
     },
   }),
