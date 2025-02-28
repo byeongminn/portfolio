@@ -65,7 +65,7 @@ export const title = style([
   f.truncate2,
   {
     fontWeight: 600,
-    fontSize: "14px",
+    fontSize: "16px",
     color: "#050505",
   },
   responsiveStyle({
@@ -79,7 +79,7 @@ export const description = style([
   f.truncate2,
   {
     marginTop: "0.25rem",
-    fontSize: "12px",
+    fontSize: "14px",
     color: "#111111",
   },
   responsiveStyle({
@@ -106,7 +106,7 @@ export const achievementsWrapper = style([
 
 export const period = style([
   {
-    fontSize: "12px",
+    fontSize: "14px",
   },
   responsiveStyle({
     lg: {
@@ -118,7 +118,7 @@ export const period = style([
 export const achievementTitle = style([
   {
     fontWeight: 500,
-    fontSize: "12px",
+    fontSize: "14px",
   },
   responsiveStyle({
     lg: {
@@ -131,7 +131,7 @@ export const achievementContents = style([
   {
     paddingLeft: "0.5rem",
     fontWeight: 400,
-    fontSize: "12px",
+    fontSize: "14px",
   },
   responsiveStyle({
     lg: {

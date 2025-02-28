@@ -9,13 +9,12 @@ export const chip = style([
     backgroundColor: "#f2f2f2",
     borderRadius: "999px",
     fontFamily: FONT_SOURCE_CODE_PRO,
-    fontSize: "10px",
+    fontSize: "12px",
     color: "#555555",
   },
   responsiveStyle({
     lg: {
       padding: "0.5rem 0.75rem",
-      fontSize: "12px",
     },
   }),
 ]);
