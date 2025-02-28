@@ -1,6 +1,9 @@
 import { globalStyle } from "@vanilla-extract/css";
 
-export const WIDTH_DESKTOP = "90rem";
+export const WIDTH_XXL = "90rem"; // 1440px
+export const WIDTH_XL = "75rem"; // 1200px
+export const WIDTH_LG = "62rem"; // 992px
+export const WIDTH_MD = "48rem"; // 768px
 
 export const FONT_PRETENDARD = "var(--font-pretendard)";
 export const FONT_SOURCE_CODE_PRO = "var(--font-source-code-pro)";

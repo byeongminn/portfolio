@@ -1,5 +1,11 @@
 import { f } from "@/shared/styles/functions";
-import { WIDTH_DESKTOP } from "@/shared/styles/globals.css";
+import { responsiveStyle } from "@/shared/styles/functions/layout.css";
+import {
+  WIDTH_LG,
+  WIDTH_MD,
+  WIDTH_XL,
+  WIDTH_XXL,
+} from "@/shared/styles/globals.css";
 import { style } from "@vanilla-extract/css";
 
 export const container = style([
@@ -9,9 +15,25 @@ export const container = style([
   {
     margin: "0 auto",
     padding: "5rem 0",
-    maxWidth: WIDTH_DESKTOP,
     gap: "3.125rem",
   },
+  responsiveStyle({
+    xxl: {
+      maxWidth: WIDTH_XXL,
+    },
+    xl: {
+      maxWidth: WIDTH_XL,
+    },
+    lg: {
+      maxWidth: WIDTH_LG,
+    },
+    md: {
+      maxWidth: WIDTH_MD,
+    },
+    sm: {
+      padding: "5rem 1rem",
+    },
+  }),
 ]);
 
 export const wrapper = style([

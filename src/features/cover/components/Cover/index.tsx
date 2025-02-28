@@ -16,7 +16,10 @@ export const Cover = () => {
           {/* 타이틀 */}
           <div className={s.titleWrapper}>
             <div className={s.p1}>
-              {title.p1} <Search />
+              <span>{title.p1}</span>
+              <div className={s.searchIconWrapper}>
+                <Search className={s.searchIcon} viewBox="0 0 72 72" />
+              </div>
             </div>
             <div className={s.p2}>{title.p2}</div>
           </div>
@@ -29,32 +32,38 @@ export const Cover = () => {
                 <div className={s.stackWrapper}>
                   {skills.map(({ iconUrl, name }) => (
                     <div key={name} className={s.stack}>
-                      <Image src={iconUrl} alt={name} width={24} height={24} />
-                      <h4>{name}</h4>
+                      <Image
+                        className={s.stackIcon}
+                        src={iconUrl}
+                        alt={name}
+                        width={24}
+                        height={24}
+                      />
+                      <h4 className={s.stackName}>{name}</h4>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* 커버 이미지 */}
-        <div className={s.imageWrapper}>
-          <Image
-            className={s.image}
-            src="images/developer.svg"
-            alt="developer"
-            fill
-            sizes="(max-width: 767px) 50vw, 25vw"
-          />
+          {/* 커버 이미지 */}
+          <div className={s.imageWrapper}>
+            <Image
+              className={s.image}
+              src="images/developer.svg"
+              alt="developer"
+              width={500}
+              height={500}
+            />
+          </div>
         </div>
       </div>
 
       {/* 정보 */}
       <div className={s.infoWrapper}>
-        <h2>{info.number}</h2>
-        <h2>{info.email}</h2>
+        <h2 className={s.info}>{info.number}</h2>
+        <h2 className={s.info}>{info.email}</h2>
       </div>
     </section>
   );
