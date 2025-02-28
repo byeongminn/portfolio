@@ -22,14 +22,14 @@ export const GET = async (
           {
             title: "메인페이지 성능 및 접근성 개선",
             contents: [
-              "- Performance 76 → 100",
-              "- Accessibility 89 → 94",
-              "- Best Practices 78 → 100",
+              "Performance 76 → 100",
+              "Accessibility 89 → 94",
+              "Best Practices 78 → 100",
             ],
           },
           {
             title: "상품 상세페이지 성능 및 접근성 개선",
-            contents: ["- Performance 83 → 100", "- Accessibility 87 → 95"],
+            contents: ["Performance 83 → 100", "Accessibility 87 → 95"],
           },
         ],
         stacks: [

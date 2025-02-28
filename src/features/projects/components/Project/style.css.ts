@@ -1,6 +1,7 @@
 import { f } from "@/shared/styles/functions";
 import { style } from "@vanilla-extract/css";
 import "@/shared/styles/globals.css";
+import { responsiveStyle } from "@/shared/styles/functions/layout.css";
 
 export const container = style([
   f.pFixed,
@@ -9,10 +10,15 @@ export const container = style([
     right: 0,
     bottom: 0,
     left: 0,
-    padding: "5rem 20rem",
+    padding: 0,
     backgroundColor: "rgba(0, 0, 0, 0.7)",
     overflow: "auto",
   },
+  responsiveStyle({
+    md: {
+      padding: "5rem 12rem",
+    },
+  }),
 ]);
 
 export const wrapper = style([
@@ -21,12 +27,25 @@ export const wrapper = style([
   f.flex,
   f.directionColumn,
   {
-    gap: "2rem",
-    padding: "5rem 20%",
-    background:
-      "linear-gradient(180deg, #DADADA 0%, #DADADA 24.9%, #FDFDFD 25%, #FDFDFD 100%)",
     color: "#191919",
   },
+]);
+
+export const topWrapper = style([
+  f.pRelative,
+  f.flex,
+  f.directionColumn,
+  {
+    gap: "2rem",
+    padding: "4rem 5% 2rem",
+    backgroundColor: "#FDFDFD",
+    zIndex: 1,
+  },
+  responsiveStyle({
+    md: {
+      padding: "5rem 20% 2rem",
+    },
+  }),
 ]);
 
 export const closeWrapper = style([
@@ -39,8 +58,14 @@ export const closeWrapper = style([
 
 export const close = style([
   {
+    scale: 0.75,
     cursor: "pointer",
   },
+  responsiveStyle({
+    md: {
+      scale: 1,
+    },
+  }),
 ]);
 
 export const titleWrapper = style([
@@ -55,6 +80,7 @@ export const titleWrapper = style([
 export const title = style([
   {
     fontWeight: 500,
+    textAlign: "center",
   },
 ]);
 
@@ -65,6 +91,35 @@ export const thumbnailWrapper = style([
     backgroundColor: "#ffffff",
     aspectRatio: "2 / 1",
   },
+  {
+    selectors: {
+      "&::before": {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        content: "",
+        width: "100%",
+        height: "70%",
+        backgroundColor: "#DADADA",
+        zIndex: -1,
+      },
+    },
+  },
+]);
+
+export const bottomWrapper = style([
+  f.flex,
+  f.directionColumn,
+  {
+    gap: "2rem",
+    padding: "0 5% 5rem 5%",
+    backgroundColor: "#FDFDFD",
+  },
+  responsiveStyle({
+    md: {
+      padding: "0 20% 5rem 20%",
+    },
+  }),
 ]);
 
 export const contentTitle = style([
@@ -76,8 +131,45 @@ export const contentTitle = style([
 ]);
 
 export const content = style([
+  f.pRelative,
   {
-    lineHeight: 1.3,
+    paddingLeft: "0.75rem",
+    lineHeight: "1.5rem",
+  },
+  {
+    selectors: {
+      "&::before": {
+        content: "",
+        position: "absolute",
+        top: "0.75rem",
+        left: 0,
+        width: "0.25rem",
+        height: "0.25rem",
+        borderRadius: "50%",
+        backgroundColor: "#000000",
+      },
+    },
+  },
+]);
+
+export const detail = style([
+  f.pRelative,
+  {
+    paddingLeft: "0.75rem",
+    lineHeight: "1.5rem",
+  },
+  {
+    selectors: {
+      "&::before": {
+        content: "",
+        position: "absolute",
+        top: "0.75rem",
+        left: 0,
+        width: "0.375rem",
+        height: "1px",
+        backgroundColor: "#000000",
+      },
+    },
   },
 ]);
 
