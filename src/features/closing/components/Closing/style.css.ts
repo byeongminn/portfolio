@@ -22,7 +22,7 @@ export const closingWrapper = style([
 export const thanks = style([
   {
     fontWeight: 700,
-    fontSize: "24px",
+    fontSize: "32px",
     color: "#111111",
   },
   responsiveStyle({
@@ -30,7 +30,7 @@ export const thanks = style([
       fontSize: "60px",
     },
     md: {
-      fontSize: "42px",
+      fontSize: "46px",
     },
   }),
 ]);
@@ -38,7 +38,7 @@ export const thanks = style([
 export const aspiration = style([
   {
     marginTop: "1.5rem",
-    fontSize: "12px",
+    fontSize: "16px",
     textAlign: "center",
   },
   responsiveStyle({
@@ -48,7 +48,7 @@ export const aspiration = style([
     },
     md: {
       marginTop: "3rem",
-      fontSize: "22px",
+      fontSize: "24px",
     },
   }),
 ]);
@@ -79,15 +79,12 @@ export const copyrightWrapper = style([
 
 export const copyright = style([
   {
-    fontSize: "10px",
+    fontSize: "12px",
     color: "#696969",
   },
   responsiveStyle({
     lg: {
       fontSize: "14px",
-    },
-    md: {
-      fontSize: "12px",
     },
   }),
 ]);
