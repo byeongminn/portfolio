@@ -3,6 +3,11 @@
 import { useRouter } from "next/navigation";
 import { useGetProject } from "@/features/projects/hooks/useGetProject";
 import Close from "./close.svg";
+import { Outline } from "@/features/projects/components/Outline";
+import { Roles } from "@/features/projects/components/Roles";
+import { Achievements } from "@/features/projects/components/Achievements";
+import { Features } from "@/features/projects/components/Features";
+import { Solutions } from "@/features/projects/components/Solutions";
 import * as s from "./style.css";
 
 type Props = {
@@ -41,67 +46,22 @@ export const Project = ({ title }: Props) => {
 
         <div className={s.bottomWrapper}>
           {/* 개요 */}
-          <div>
-            <h2 className={s.contentTitle}>📌 프로젝트 개요</h2>
-            {project.outline.map((o, idx) => (
-              <p key={idx} className={s.content}>
-                {o}
-              </p>
-            ))}
-          </div>
+          <Outline outline={project.outline} />
 
           {/* 구분선 */}
           <div className={s.divider}></div>
 
+          {/* 주요 기능 */}
+          <Features features={project.features} />
+
           {/* 담당 역할 및 기여 */}
-          <div>
-            <h2 className={s.contentTitle}>🛠️ 담당 역할 및 기여</h2>
-            {/* 기본 */}
-            {project.roles.default.map((defaultRole, idx) => (
-              <p key={idx} className={s.content}>
-                {defaultRole}
-              </p>
-            ))}
-            {/* 어드민 */}
-            {project.roles.admin?.length && <h4>Admin</h4>}
-            {project.roles.admin?.map((adminRole, idx) => (
-              <p key={idx} className={s.content}>
-                {adminRole}
-              </p>
-            ))}
-            {/* 클라이언트 */}
-            {project.roles.client?.length && (
-              <>
-                <br />
-                <h4>Client</h4>
-              </>
-            )}
-            {project.roles.client?.map((clientRole, idx) => (
-              <p key={idx} className={s.content}>
-                {clientRole}
-              </p>
-            ))}
-          </div>
+          <Roles roles={project.roles} />
+
+          {/* 문제 해결 사례 */}
+          <Solutions solutions={project.solutions} />
 
           {/* 성과 및 결과 */}
-          <div>
-            <h2 className={s.contentTitle}>🏆 성과 및 결과</h2>
-            {project.achievements.map(({ title, contents }) => (
-              <div key={title} className={s.content}>
-                <p>{title}</p>
-                {contents.map((content) => (
-                  <p key={content} className={s.detail}>
-                    {content}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
-
-          {/* 결과물 */}
-          <div>
-            <h2 className={s.contentTitle}>🖥️ 결과물</h2>
-          </div>
+          <Achievements achievements={project.achievements} />
         </div>
       </div>
     </section>

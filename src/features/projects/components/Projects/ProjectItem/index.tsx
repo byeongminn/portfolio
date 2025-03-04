@@ -30,12 +30,12 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
             {/* 기간 및 주요성과 */}
             <div className={s.achievementsWrapper}>
               <h4 className={s.period}>{period}</h4>
-              {achievements.map(({ title, contents }) => (
+              {achievements.map(({ title, descriptions }) => (
                 <div key={title}>
                   <h4 className={s.achievementTitle}>{title}</h4>
-                  {contents.map((content) => (
-                    <p key={content} className={s.achievementContents}>
-                      {content}
+                  {descriptions.map((description) => (
+                    <p key={description} className={s.achievementContents}>
+                      {description}
                     </p>
                   ))}
                 </div>

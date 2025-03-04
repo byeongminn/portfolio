@@ -1,17 +1,8 @@
-import { Project } from "@/features/projects/api/getProjects";
+import { ProjectItem } from "@/features/projects/api/getProjects";
 import { API_BASE_URL } from "@/shared/constants";
 
 export type GetProjectItemRequestParams = {
   title: string;
-};
-
-export type ProjectItem = Project & {
-  outline: string[];
-  roles: {
-    admin?: string[];
-    client?: string[];
-    default: string[];
-  };
 };
 
 export type GetProjectItemResponse = ProjectItem;

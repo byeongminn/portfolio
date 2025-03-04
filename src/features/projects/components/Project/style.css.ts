@@ -79,7 +79,8 @@ export const titleWrapper = style([
 
 export const title = style([
   {
-    fontWeight: 500,
+    fontWeight: 700,
+    fontSize: "36px",
     textAlign: "center",
   },
 ]);
@@ -111,7 +112,7 @@ export const bottomWrapper = style([
   f.flex,
   f.directionColumn,
   {
-    gap: "2rem",
+    gap: "2.5rem",
     padding: "0 5% 5rem 5%",
     backgroundColor: "#FDFDFD",
   },
@@ -122,19 +123,28 @@ export const bottomWrapper = style([
   }),
 ]);
 
-export const contentTitle = style([
+export const sectionContainer = style([
+  f.flex,
+  f.directionColumn,
   {
-    marginBottom: "0.5rem",
-    fontWeight: 500,
-    fontSize: "20px",
+    gap: "0.5rem",
   },
 ]);
 
-export const content = style([
+export const sectionHeading = style([
+  {
+    marginBottom: "0.5rem",
+    fontWeight: 600,
+    fontSize: "24px",
+  },
+]);
+
+export const sectionTitle = style([
   f.pRelative,
   {
     paddingLeft: "0.75rem",
     lineHeight: "1.5rem",
+    fontWeight: 500,
   },
   {
     selectors: {
@@ -152,11 +162,14 @@ export const content = style([
   },
 ]);
 
-export const detail = style([
+export const sectionList = style([]);
+
+export const sectionItem = style([
   f.pRelative,
   {
-    paddingLeft: "0.75rem",
+    paddingLeft: "1.5rem",
     lineHeight: "1.5rem",
+    fontWeight: 300,
   },
   {
     selectors: {
@@ -164,7 +177,7 @@ export const detail = style([
         content: "",
         position: "absolute",
         top: "0.75rem",
-        left: 0,
+        left: "0.75rem",
         width: "0.375rem",
         height: "1px",
         backgroundColor: "#000000",
@@ -177,5 +190,28 @@ export const divider = style([
   {
     height: "1px",
     backgroundColor: "#dadada",
+  },
+]);
+
+export const solutionWrapper = style([
+  f.flex,
+  f.directionColumn,
+  {
+    gap: "0.75rem",
+    padding: "0.75rem",
+    backgroundColor: "#f1f1f1",
+    borderRadius: "0.5rem",
+  },
+]);
+
+export const solutionType = style([
+  {
+    display: "inline-block",
+    marginLeft: "0.75rem",
+    padding: "0.125rem 0.25rem",
+    backgroundColor: "#dddddd",
+    borderRadius: "0.25rem",
+    fontWeight: 500,
+    lineHeight: "1.5rem",
   },
 ]);
