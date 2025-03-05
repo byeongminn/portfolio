@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useGetCover } from "@/features/cover/hooks/useGetCover";
 import Search from "./search.svg";
 import * as s from "./style.css";
+import { IMAGE_URL } from "@/shared/constants";
 
 export const Cover = () => {
   const { data } = useGetCover();
@@ -51,11 +52,10 @@ export const Cover = () => {
           <div className={s.imageWrapper}>
             <Image
               className={s.image}
-              src="images/developer.svg"
+              src={`${IMAGE_URL}/developer.svg`}
               alt="developer"
               fill
-              // width={500}
-              // height={500}
+              priority
             />
           </div>
         </div>

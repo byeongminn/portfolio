@@ -3,6 +3,7 @@ import Image from "next/image";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { Project } from "@/features/projects/api/getProjects";
 import { Chip } from "@/features/projects/components/Chip";
+import { IMAGE_URL } from "@/shared/constants";
 import * as s from "./style.css";
 
 type ProjectItemProps = {
@@ -33,7 +34,7 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
           }}
         >
           <Image
-            src={`images/${thumbnail.src}.svg`}
+            src={`${IMAGE_URL}/${thumbnail.src}.svg`}
             alt={thumbnail.alt}
             width={thumbnail.width}
             height={thumbnail.height}

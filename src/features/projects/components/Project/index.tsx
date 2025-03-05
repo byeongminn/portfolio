@@ -10,6 +10,7 @@ import { Roles } from "@/features/projects/components/Roles";
 import { Achievements } from "@/features/projects/components/Achievements";
 import { Features } from "@/features/projects/components/Features";
 import { Solutions } from "@/features/projects/components/Solutions";
+import { IMAGE_URL } from "@/shared/constants";
 import * as s from "./style.css";
 
 type Props = {
@@ -52,7 +53,7 @@ export const Project = ({ title }: Props) => {
             }}
           >
             <Image
-              src={`images/${project.thumbnail.src}.svg`}
+              src={`${IMAGE_URL}/${project.thumbnail.src}.svg`}
               alt={project.thumbnail.alt}
               width={project.thumbnail.width}
               height={project.thumbnail.height}
