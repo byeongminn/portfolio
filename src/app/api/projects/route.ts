@@ -1,10 +1,8 @@
-import { DATA_URL } from "@/shared/constants";
+import projectItems from "@/shared/data/projectItems.json";
 
 export const GET = async () => {
   try {
-    const data = await fetch(`${DATA_URL}/projectItems.json`).then((res) =>
-      res.json()
-    );
+    const data = projectItems;
 
     return Response.json({ projects: data });
   } catch {
