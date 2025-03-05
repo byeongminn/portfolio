@@ -1,8 +1,10 @@
-import { loadJsonData } from "@/shared/lib/data";
+import { DATA_URL } from "@/shared/constants";
 
-export const GET = () => {
+export const GET = async () => {
   try {
-    const data = loadJsonData("projectItems");
+    const data = await fetch(`${DATA_URL}/projectItems.json`).then((res) =>
+      res.json()
+    );
 
     return Response.json({ projects: data });
   } catch {

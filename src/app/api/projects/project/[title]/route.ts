@@ -3,7 +3,7 @@ import {
   GetProjectItemRequestParams,
   GetProjectItemResponse,
 } from "@/features/projects/api/getProject";
-import { loadJsonData } from "@/shared/lib/data";
+import { DATA_URL } from "@/shared/constants";
 
 export const GET = async (
   request: NextRequest,
@@ -12,7 +12,9 @@ export const GET = async (
   try {
     const title = (await params).title;
 
-    const data = loadJsonData("projectItems");
+    const data = await fetch(`${DATA_URL}/projectItems.json`).then((res) =>
+      res.json()
+    );
 
     const findedData = findingData(data, title);
 
