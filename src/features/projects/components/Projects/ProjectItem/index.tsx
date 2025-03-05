@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { Project } from "@/features/projects/api/getProjects";
 import { Chip } from "@/features/projects/components/Chip";
 import * as s from "./style.css";
@@ -8,13 +10,35 @@ type ProjectItemProps = {
 };
 
 export const ProjectItem = ({ project }: ProjectItemProps) => {
-  const { segment, title, description, period, achievements, stacks } = project;
+  const {
+    segment,
+    thumbnail,
+    title,
+    description,
+    period,
+    achievements,
+    stacks,
+  } = project;
 
   return (
     <Link className={s.link} href={`/${segment}`} scroll={false}>
       <div className={s.container}>
         {/* 썸네일 */}
-        <div className={s.thumbnailWrapper}></div>
+        <div
+          className={s.thumbnailWrapper}
+          style={{
+            ...assignInlineVars({
+              [s.backgroundColorVar]: thumbnail.backgroundColor,
+            }),
+          }}
+        >
+          <Image
+            src={`images/${thumbnail.src}.svg`}
+            alt={thumbnail.alt}
+            width={thumbnail.width}
+            height={thumbnail.height}
+          />
+        </div>
 
         <div className={s.contentsWrapper}>
           <div className={s.infoWrapper}>

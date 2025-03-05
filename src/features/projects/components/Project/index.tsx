@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { useGetProject } from "@/features/projects/hooks/useGetProject";
 import Close from "./close.svg";
 import { Outline } from "@/features/projects/components/Outline";
@@ -41,7 +43,21 @@ export const Project = ({ title }: Props) => {
           </div>
 
           {/* 썸네일 */}
-          <div className={s.thumbnailWrapper}></div>
+          <div
+            className={s.thumbnailWrapper}
+            style={{
+              ...assignInlineVars({
+                [s.backgroundColor]: project.thumbnail.backgroundColor,
+              }),
+            }}
+          >
+            <Image
+              src={`images/${project.thumbnail.src}.svg`}
+              alt={project.thumbnail.alt}
+              width={project.thumbnail.width}
+              height={project.thumbnail.height}
+            />
+          </div>
         </div>
 
         <div className={s.bottomWrapper}>

@@ -1,7 +1,7 @@
+import { createVar, style } from "@vanilla-extract/css";
 import { f } from "@/shared/styles/functions";
-import { style } from "@vanilla-extract/css";
-import "@/shared/styles/globals.css";
 import { responsiveStyle } from "@/shared/styles/functions/layout.css";
+import "@/shared/styles/globals.css";
 
 export const container = style([
   f.pFixed,
@@ -85,7 +85,9 @@ export const title = style([
   },
 ]);
 
+export const backgroundColor = createVar();
 export const thumbnailWrapper = style([
+  f.flexCenterBox,
   {
     border: "4px solid #c3c3c3",
     borderRadius: "1rem",
@@ -101,7 +103,7 @@ export const thumbnailWrapper = style([
         content: "",
         width: "100%",
         height: "70%",
-        backgroundColor: "#DADADA",
+        backgroundColor: backgroundColor,
         zIndex: -1,
       },
     },

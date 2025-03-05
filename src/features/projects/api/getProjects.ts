@@ -1,5 +1,13 @@
 import { API_BASE_URL } from "@/shared/constants";
 
+type Thumbnail = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  backgroundColor: string;
+};
+
 type Feature = {
   title: string;
   descriptions: string[];
@@ -30,6 +38,7 @@ type Achievement = {
 
 export type ProjectItem = {
   segment: string;
+  thumbnail: Thumbnail;
   title: string;
   description: string;
   period: string;
@@ -43,7 +52,13 @@ export type ProjectItem = {
 
 export type Project = Pick<
   ProjectItem,
-  "segment" | "title" | "description" | "period" | "achievements" | "stacks"
+  | "segment"
+  | "thumbnail"
+  | "title"
+  | "description"
+  | "period"
+  | "achievements"
+  | "stacks"
 >;
 
 export type GetProjectsResponse = {

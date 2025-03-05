@@ -1,6 +1,6 @@
+import { createVar, style } from "@vanilla-extract/css";
 import { f } from "@/shared/styles/functions";
 import { responsiveStyle } from "@/shared/styles/functions/layout.css";
-import { style } from "@vanilla-extract/css";
 
 export const link = style([
   {
@@ -21,11 +21,13 @@ export const container = style([
   },
 ]);
 
+export const backgroundColorVar = createVar();
 export const thumbnailWrapper = style([
   f.wFull,
+  f.flexCenterBox,
   {
     aspectRatio: "2 / 1",
-    backgroundColor: "#dedede",
+    backgroundColor: backgroundColorVar,
     borderTopLeftRadius: "0.75rem",
     borderTopRightRadius: "0.75rem",
   },
