@@ -39,6 +39,7 @@ export const Cover = () => {
                         alt={name}
                         width={24}
                         height={24}
+                        priority
                       />
                       <h4 className={s.stackName}>{name}</h4>
                     </div>
