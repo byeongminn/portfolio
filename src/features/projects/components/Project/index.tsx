@@ -57,6 +57,7 @@ export const Project = ({ title }: Props) => {
               alt={project.thumbnail.alt}
               width={project.thumbnail.width}
               height={project.thumbnail.height}
+              priority
             />
           </div>
         </div>
