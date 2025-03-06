@@ -70,5 +70,5 @@ export const getProjectsURL = `${API_BASE_URL}/api/projects`;
 export const getProjects = async (): Promise<GetProjectsResponse> => {
   const response = await fetch(getProjectsURL);
 
-  return response.json();
+  return await response.json();
 };
