@@ -3,7 +3,6 @@ import {
   GetProjectItemRequestParams,
   GetProjectItemResponse,
 } from "@/features/projects/api/getProject";
-import projectItems from "@/shared/data/projectItems.json";
 
 export const GET = async (
   request: NextRequest,
@@ -12,9 +11,11 @@ export const GET = async (
   try {
     const title = (await params).title;
 
-    const data = projectItems;
+    const data = await import(
+      "../../../../../../public/data/projectItems.json"
+    );
 
-    const findedData = findingData(data, title);
+    const findedData = findingData(data.default, title);
 
     return Response.json({ project: findedData });
   } catch {
