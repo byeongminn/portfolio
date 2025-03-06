@@ -17,7 +17,6 @@ export const container = style([
     backgroundColor: "#ffffff",
     borderRadius: "0.75rem",
     boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.16)",
-    lineHeight: 1.3,
   },
 ]);
 

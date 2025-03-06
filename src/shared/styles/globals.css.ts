@@ -18,44 +18,39 @@ globalStyle("html, body", {
   maxWidth: "100vw",
   minHeight: "100vh",
   backgroundColor: "#FAFAFF",
-  fontFamily: FONT_PRETENDARD,
+  fontFamily: `${FONT_PRETENDARD} !important`,
+  lineHeight: "1.4  !important",
   color: "#333333",
 });
 
 globalStyle("h1", {
   fontSize: "32px",
-  lineHeight: 1.4,
 });
 
 globalStyle("h2", {
   fontSize: "24px",
-  lineHeight: 1.4,
 });
 
 globalStyle("h3", {
   fontSize: "18px",
-  lineHeight: 1.4,
 });
 
 globalStyle("h4", {
   fontSize: "16px",
-  lineHeight: 1.4,
 });
 
 globalStyle("h5", {
   fontSize: "14px",
-  lineHeight: 1.4,
 });
 
 globalStyle("h6", {
   fontSize: "12px",
-  lineHeight: 1.4,
 });
 
 globalStyle("strong", {
-  fontWeight: 500,
+  fontWeight: "500  !important",
   background: "#e0e0e0",
-  marginRight: "0.0625rem",
-  padding: "0.125rem 0.1875rem",
+  marginRight: "0.0625rem !important",
+  padding: "0.125rem 0.1875rem  !important",
   borderRadius: "0.25rem",
 });
