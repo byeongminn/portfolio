@@ -13,7 +13,11 @@ export const Closing = () => {
           <br />
           원활한 커뮤니케이션을 통해 목표를 달성하는 개발자가 되고자 합니다.
         </h2>
-        <Link href="https://github.com/byeongminn" className={s.githubLink}>
+        <Link
+          href="https://github.com/byeongminn"
+          className={s.githubLink}
+          aria-label="Visit GitHub profile"
+        >
           <Github />
         </Link>
       </div>

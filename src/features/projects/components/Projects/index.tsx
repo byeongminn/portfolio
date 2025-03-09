@@ -45,10 +45,16 @@ export const Projects = () => {
           ))}
         </Swiper>
         <div>
-          <button className={clsx("swiperButtonPrev", s.swiperButtonPrev)}>
+          <button
+            className={clsx("swiperButtonPrev", s.swiperButtonPrev)}
+            aria-label="Previous slide"
+          >
             <Prev />
           </button>
-          <button className={clsx("swiperButtonNext", s.swiperButtonNext)}>
+          <button
+            className={clsx("swiperButtonNext", s.swiperButtonNext)}
+            aria-label="Next slide"
+          >
             <Next />
           </button>
         </div>
