@@ -56,6 +56,12 @@ export const Cover = () => {
               src={`${IMAGE_URL}/developer.svg`}
               alt="developer"
               fill
+              sizes={`
+                (max-width: 767px) 50vw,
+                (max-width: 991px) 20rem,
+                (max-width: 1439px) 25rem,
+                31.25rem
+              `}
               priority
             />
           </div>
