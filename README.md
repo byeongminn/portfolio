@@ -1,4 +1,4 @@
-# Byeongminn
+# Portfolio
 
 ![Npm](https://img.shields.io/badge/npm-10.7.0-orange?style=flat-square)
 ![Node.js](https://img.shields.io/badge/node.js-20.14.0-blue?style=flat-square)
