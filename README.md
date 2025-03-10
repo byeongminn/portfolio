@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Byeongminn
+
+![Npm](https://img.shields.io/badge/npm-10.7.0-orange?style=flat-square)
+![Node.js](https://img.shields.io/badge/node.js-20.14.0-blue?style=flat-square)
+
+개인 포트폴리오 프로젝트를 통해 저의 기술력과 문제 해결 역량을 효과적으로 보여줄 수 있는 웹 페이지를 만들고자 했습니다.
+<br />
+Next.js 프레임워크를 기반으로 구축하였으며, FSD(Feature-Sliced Design) 디렉토리 구조를 적용하여 유지보수성과 확장성을 고려한 구조를 구현했습니다. 또한, Intercepting Routes와 Parallel Routes 기능을 활용하여 모달 시스템을 효과적으로 구축하였습니다. 이를 통해 모달이 독립적인 경로로 동작하면서도, 기존 페이지와 자연스럽게 연결될 수 있도록 최적화하였습니다.
+<br />
+이 프로젝트는 최신 프론트엔드 기술을 적용하고, 성능과 사용자 경험을 동시에 개선하는 방향으로 설계되었습니다.
+
+### Built With
+
+- ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=ffffff)
+- ![Typescript](https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=Typescript&logoColor=white)
+- ![Vanilla-Extract](https://img.shields.io/badge/Vanilla_Extract-CBFBF1?style=for-the-badge&logo=vanillaextract&logoColor=000000)
+- ![React-Query](https://img.shields.io/badge/React_query-FF4154?style=for-the-badge&logo=reactquery&logoColor=ffffff)
+- ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=ffffff)
+
+<br />
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repo
+   ```
+   git clone https://github.com/byeongminn/portfolio.git
+   ```
+2. Change to the folder created by the clone command
+   ```
+   cd portfolio
+   ```
+3. Install NPM packages
+   ```
+   yarn
+   ```
+4. Start the project
+   ```
+   yarn dev
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<br />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Release History
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 1.0.0
+  - The first release
+- 0.0.1 \* Work in progress
+  <br />
