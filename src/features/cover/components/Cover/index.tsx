@@ -41,7 +41,7 @@ export const Cover = () => {
                         height={24}
                         priority
                       />
-                      <h4 className={s.stackName}>{name}</h4>
+                      <h3 className={s.stackName}>{name}</h3>
                     </div>
                   ))}
                 </div>
