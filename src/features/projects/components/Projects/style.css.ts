@@ -52,7 +52,7 @@ export const swiperButton = style([
   },
   {
     selectors: {
-      [`.${wrapper}:hover &`]: {
+      [`${wrapper}:hover &`]: {
         opacity: 1,
       },
       "&:hover": {
