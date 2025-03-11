@@ -30,6 +30,16 @@ export const GET = async (
           "프로젝트 목적: Next.js의 App Router와 FSD 디렉토리 구조를 연습하기 위해 상품 목록, 검색, 상세보기 기능을 구현한 1인 쇼핑몰 프로젝트",
           "기술 스택: Next.js App Router, TypeScript, @tanstack/react-query, MSW, Vanilla-extract, Vercel",
         ],
+        links: [
+          {
+            text: "Github 페이지",
+            url: "https://github.com/byeongminn/shopping_mall",
+          },
+          {
+            text: "배포 페이지",
+            url: "https://shopping-mall-murex.vercel.app",
+          },
+        ],
         stacks: [
           "Next.js 14",
           "TypeScript",

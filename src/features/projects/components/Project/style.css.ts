@@ -195,6 +195,17 @@ export const divider = style([
   },
 ]);
 
+export const url = style([
+  {
+    marginRight: "0.0625rem",
+    padding: "0.125rem 0.375rem",
+    backgroundColor: "#F6DCDC",
+    borderRadius: "0.25rem",
+    color: "#191919",
+    wordBreak: "break-word",
+  },
+]);
+
 export const solutionWrapper = style([
   f.flex,
   f.directionColumn,

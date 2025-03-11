@@ -8,6 +8,11 @@ type Thumbnail = {
   backgroundColor: string;
 };
 
+type Link = {
+  text: string;
+  url: string;
+};
+
 type Feature = {
   title: string;
   descriptions: string[];
@@ -43,6 +48,7 @@ export type ProjectItem = {
   description: string;
   period: string;
   outline: string[];
+  links?: Link[];
   stacks: string[];
   features: Feature[];
   roles: Roles;

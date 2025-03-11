@@ -64,7 +64,7 @@ export const Project = ({ title }: Props) => {
 
         <div className={s.bottomWrapper}>
           {/* 개요 */}
-          <Outline outline={project.outline} />
+          <Outline outline={project.outline} links={project.links} />
 
           {/* 구분선 */}
           <div className={s.divider}></div>
