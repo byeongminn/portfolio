@@ -26,6 +26,10 @@ export const GET = async () => {
             name: "Javascript",
           },
           {
+            iconUrl: `${ICON_URL}/reactquery.svg`,
+            name: "@tanstack/react-query",
+          },
+          {
             iconUrl: `${ICON_URL}/vanillaextract.svg`,
             name: "Vanilla-extract",
           },

@@ -176,7 +176,6 @@ export const stacks = style([
   f.directionColumn,
   {
     gap: "0.5rem",
-    textTransform: "capitalize",
   },
   responsiveStyle({
     lg: {
