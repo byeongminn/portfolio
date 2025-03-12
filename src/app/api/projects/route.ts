@@ -372,16 +372,9 @@ export const GET = async () => {
         outline: [
           "(주)스마트모빌러티 기업에서 진행한 프로젝트",
           "서비스 목적: 오프라인 문서를 통해 관리되던 직원들의 근태 및 기자재를 디지털화하여 관리 효율성을 개선하는 서비스 제공",
-          "기술 스택: React, TypeScript, Recoil, Context API, @emotion, SCSS",
+          "기술 스택: React, TypeScript, Context API, @emotion, SCSS",
         ],
-        stacks: [
-          "React",
-          "TypeScript",
-          "Recoil",
-          "Context API",
-          "@emotion",
-          "SCSS",
-        ],
+        stacks: ["React", "TypeScript", "Context API", "@emotion", "SCSS"],
         features: [
           {
             title: "회원 관리",
