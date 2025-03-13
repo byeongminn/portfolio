@@ -44,7 +44,7 @@ export const swiperButton = style([
     border: "none",
     borderRadius: "50%",
     color: "#ffffff",
-    opacity: 0,
+    // opacity: 0,
     zIndex: 2,
     transition: "all 0.3s",
     cursor: "pointer",
@@ -52,9 +52,9 @@ export const swiperButton = style([
   },
   {
     selectors: {
-      [`${wrapper}:hover &`]: {
-        opacity: 1,
-      },
+      // [`${wrapper}:hover &`]: {
+      //   opacity: 1,
+      // },
       "&:hover": {
         backgroundColor: "rgba(0, 0, 0, 1)",
       },
