@@ -32,8 +32,13 @@ export type Roles = {
 type Solution = {
   title: string;
   issues: string[];
+  causes?: string[];
   approaches: string[];
   outcomes: string[];
+  references?: {
+    label: string;
+    url: string;
+  }[];
 };
 
 type Achievement = {

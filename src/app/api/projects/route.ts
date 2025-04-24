@@ -12,12 +12,22 @@ export const GET = async () => {
         },
         title: "내일의집",
         description:
-          "이커머스에 관심을 바탕으로, Next.js의 App Router와 FSD 디렉토리 구조 연습을 위해 상품 목록, 검색, 상세보기 기능을 구현한 개인 프로젝트",
+          "프론트엔드 개발 과정에서 학습한 개념들을 통합적으로 실습하고자 진행한 Next.js 기반 1인 쇼핑몰 프로젝트",
         period: "2024. 12 ~ 2024. 12",
         outline: [
           "1인 사이드 프로젝트",
-          "프로젝트 목적: Next.js의 App Router와 FSD 디렉토리 구조를 연습하기 위해 상품 목록, 검색, 상세보기 기능을 구현한 1인 쇼핑몰 프로젝트",
+          "프로젝트 목적: 프론트엔드 개발 과정에서 학습한 개념들을 통합적으로 실습하고자 진행한 Next.js 기반 1인 쇼핑몰 프로젝트",
           "기술 스택: Next.js App Router, TypeScript, @tanstack/react-query, MSW, Vanilla-extract, Vercel",
+        ],
+        links: [
+          {
+            text: "Github 페이지",
+            url: "https://github.com/byeongminn/shopping_mall",
+          },
+          {
+            text: "배포 페이지",
+            url: "https://shopping-mall-murex.vercel.app",
+          },
         ],
         stacks: [
           "Next.js 14",
@@ -45,6 +55,14 @@ export const GET = async () => {
           {
             title: "검색 페이지",
             descriptions: ["키워드 입력을 통한 상품 검색 기능 제공"],
+          },
+          {
+            title: "로그인 페이지",
+            descriptions: [
+              "JWT 기반 인증 시스템을 통해 사용자의 로그인 세션을 관리",
+              "로그인 성공 후 redirect 파라미터를 이용해 사용자가 의도한 경로로 이동 처리함으로써 UX를 개선",
+              "Protected Route 설정을 통해 인증 기반 페이지 접근의 안정성을 확보",
+            ],
           },
         ],
         roles: {
@@ -92,54 +110,68 @@ export const GET = async () => {
         },
         solutions: [
           {
-            title: "API 중복 호출로 인한 성능 저하",
+            title: "JWT 인증 후 Protected Route 적용 문제 해결",
             issues: [
-              "상품 목록 페이지에서 같은 데이터를 여러 번 요청하면서 불필요한 API 호출이 발생",
-              "네트워크 부하 증가 및 응답 속도 저하 문제",
+              "로그아웃 이후에도 보호되어야 할 페이지(`/cart`)에 접근 가능한 문제 발생",
+              "시나리오: 로그인 상태에서 `/cart` 접근 → `/`로 이동 후 로그아웃 → 브라우저 뒤로가기 → 인증 없이 `/cart` 접근 가능",
+            ],
+            causes: [
+              "미들웨어는 서버 요청 시에만 작동",
+              "브라우저 bfcache, prefetch, 내부 라우팅 등으로 인해 CSR 상황에서는 미작동",
+              "클라이언트 측에서도 별도의 보호 로직이 필요",
             ],
             approaches: [
-              "@tanstack/react-query를 활용하여 데이터 캐싱 및 중복 호출 방지",
-            ],
-            outcomes: ["API 요청 횟수 감소", "메인 페이지의 로딩 속도 개선"],
-          },
-          {
-            title: "비즈니스 로직과 UI가 분리되지 않아 유지보수성이 낮음",
-            issues: [
-              "API 호출 및 데이터 가공 로직이 컴포넌트 내부에 직접 작성됨",
-              "컴포넌트 크기가 커지고, 재사용성이 낮아 유지보수 어려움",
-            ],
-            approaches: [
-              "useGetGoods, useGetGoodsDetail, useGetSearchGoods Custom Hooks 설계",
-              "데이터 관련 로직을 분리하여 UI는 렌더링만 담당하도록 구조화",
-            ],
-            outcomes: ["코드 가독성 및 재사용성 증가", "유지보수 비용 감소"],
-          },
-          {
-            title: "스타일 재사용성 부족 및 반응형 디자인 최적화 필요",
-            issues: ["반응형 스타일을 효율적으로 관리하는 방식이 부족함"],
-            approaches: [
-              "responsiveStyle 유틸을 만들어 반응형 스타일을 일관성 있게 적용",
+              "클라이언트 인증 보호 로직을 HOC(withAuth)로 구현",
+              "로그인 여부에 따라 라우팅 제어",
+              'type이 "protected"이고 비로그인 상태이면 `/login`으로 리다이렉트',
+              'type이 "guest-only"이고 로그인 상태이면 `/`로 리다이렉트',
             ],
             outcomes: [
-              "반응형 디자인 구현이 단순화되고, 스타일 재사용성이 증가",
+              "로그아웃 후 브라우저 뒤로가기를 하더라도 `/cart` 접근 시 `/login`으로 이동",
+              "CSR 환경에서도 인증 보호 적용되어 UX 및 보안 강화",
+            ],
+            references: [
+              {
+                label: "🔗 트러블슈팅 상세 및 구현 코드 보기 (Notion)",
+                url: "https://byeongminn.notion.site/Next-js-Protected-Route-1dedca3c899780c981aeecde611362d0",
+              },
+              {
+                label: "🔗 Protected Route 구현 과정 정리 (Notion)",
+                url: "https://byeongminn.notion.site/Protected-Route-1dedca3c899780f8a59fcc240e89f7a1",
+              },
             ],
           },
           {
-            title: "상품 목록 로딩 방식 개선 (페이지네이션 → 무한 스크롤 적용)",
+            title: "JWT 인증 후 페이지 라우팅 문제 해결",
             issues: [
-              "기존에는 페이지네이션 방식으로 데이터를 로드했으나, 사용자가 여러 페이지를 이동해야 하는 불편함 발생",
-              "페이지 전환 시 화면이 깜빡이며 끊기는 문제도 존재",
+              "로그인 경로에 `?redirect=/cart` 파라미터가 포함된 상태에서 로그인 시도 (`/login?redirect=%2Fcart`)",
+              '로그인은 성공했으나, `router.push(searchParams.get("redirect"))`로의 페이지 전환이 정상적으로 이루어지지 않음',
+            ],
+            causes: [
+              '`searchParams.get("redirect")`는 정상적으로 동작하고, `router.push()`도 루트 경로(/)에 대해서는 문제 없이 작동',
+              "그러나 `/cart`는 로그인 이전 상태에서 Next.js에 의해 자동 prefetch됨",
+              "이 시점에는 accessToken이 없었기 때문에, 서버는 `/cart` 요청에 대해 `/login?redirect=%2Fcart`로 리다이렉트 처리",
+              "해당 응답이 브라우저에 캐시되며, 로그인 후에도 서버 재요청 없이 prefetch된 리다이렉트 응답이 그대로 사용됨",
+              "결과적으로 사용자가 다시 로그인 페이지로 되돌아가는 현상 발생",
             ],
             approaches: [
-              "useSuspenseInfiniteQuery를 활용하여 Suspense 기반의 무한 스크롤 구현",
-              "Suspense 적용으로 데이터가 로드될 때 UI 깜빡임 방지",
-              "react-intersection-observer를 활용하여 사용자가 목록 끝에 도달하면 자동으로 데이터 로드",
-              "@tanstack/react-query의 fetchNextPage를 사용하여 중복 요청을 방지하고, 캐싱을 통해 불필요한 API 호출 최소화",
+              "`router.push()` 대신 `window.location.assign()`을 사용하여 서버에 새로운 요청을 강제로 발생시킴",
+              "이를 통해 accessToken이 반영된 상태로 서버가 경로를 재평가하게 유도함",
             ],
             outcomes: [
-              "UX 개선: 사용자가 자연스럽게 상품 목록을 탐색할 수 있도록 최적화",
-              "API 요청 최적화: Suspense 적용으로 불필요한 로딩 상태 제거, API 호출 횟수 감소",
-              "성능 최적화: @tanstack/react-query의 캐싱 기능을 활용하여 데이터 로딩 속도 개선",
+              "로그인 직후 원하는 redirect 경로(/cart)로 정확히 이동",
+              "서버가 최신 쿠키 상태를 반영하여 페이지 렌더링",
+              "캐시로 인한 인증 후 라우팅 문제 해결, UX 개선",
+            ],
+            references: [
+              {
+                label: "🔗 트러블슈팅 상세 및 구현 코드 보기 (Notion)",
+                url: "https://byeongminn.notion.site/1d7dca3c8997806a804deb5f5fa17310",
+              },
+              {
+                label: "🔗 JWT 기반 인증 구현 과정 정리 (Notion)",
+                url: "https://byeongminn.notion.site/JWT-with-jsonwebtoken-jose-1cfdca3c89978025b61cea485af4774c",
+              },
             ],
           },
           {
@@ -161,6 +193,36 @@ export const GET = async () => {
               "상품 상세페이지 성능 및 접근성 개선 (Performance 83 → 100, Accessibility 87 → 95)",
               "LCP 시간 개선으로 사용자 경험 향상",
             ],
+          },
+          {
+            title: "상품 목록 로딩 방식 개선 (페이지네이션 → 무한 스크롤 적용)",
+            issues: [
+              "기존에는 페이지네이션 방식으로 데이터를 로드했으나, 사용자가 여러 페이지를 이동해야 하는 불편함 발생",
+              "페이지 전환 시 화면이 깜빡이며 끊기는 문제도 존재",
+            ],
+            approaches: [
+              "useSuspenseInfiniteQuery를 활용하여 Suspense 기반의 무한 스크롤 구현",
+              "Suspense 적용으로 데이터가 로드될 때 UI 깜빡임 방지",
+              "react-intersection-observer를 활용하여 사용자가 목록 끝에 도달하면 자동으로 데이터 로드",
+              "@tanstack/react-query의 fetchNextPage를 사용하여 중복 요청을 방지하고, 캐싱을 통해 불필요한 API 호출 최소화",
+            ],
+            outcomes: [
+              "UX 개선: 사용자가 자연스럽게 상품 목록을 탐색할 수 있도록 최적화",
+              "API 요청 최적화: Suspense 적용으로 불필요한 로딩 상태 제거, API 호출 횟수 감소",
+              "성능 최적화: @tanstack/react-query의 캐싱 기능을 활용하여 데이터 로딩 속도 개선",
+            ],
+          },
+          {
+            title: "비즈니스 로직과 UI가 분리되지 않아 유지보수성이 낮음",
+            issues: [
+              "API 호출 및 데이터 가공 로직이 컴포넌트 내부에 직접 작성됨",
+              "컴포넌트 크기가 커지고, 재사용성이 낮아 유지보수 어려움",
+            ],
+            approaches: [
+              "useGetGoods, useGetGoodsDetail, useGetSearchGoods Custom Hooks 설계",
+              "데이터 관련 로직을 분리하여 UI는 렌더링만 담당하도록 구조화",
+            ],
+            outcomes: ["코드 가독성 및 재사용성 증가", "유지보수 비용 감소"],
           },
         ],
         achievements: [

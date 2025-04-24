@@ -228,3 +228,9 @@ export const solutionType = style([
     lineHeight: "1.5rem",
   },
 ]);
+
+export const solutionLink = style([
+  {
+    color: "#191919",
+  },
+]);
