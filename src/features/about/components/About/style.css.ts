@@ -12,10 +12,12 @@ export const container = style([
   f.wFull,
   f.flex,
   f.directionColumn,
+  f.justifyCenter,
   {
     margin: "0 auto",
     padding: "2rem 1rem",
     gap: "1.25rem",
+    height: "100dvh",
   },
   responsiveStyle({
     xxl: {
